@@ -1,11 +1,13 @@
 {
    "tasks": {
-      "dev": "deno run --watch --allow-env --allow-read --allow-net main.ts"
+      "dev": "deno run --watch --allow-env --allow-read --allow-net main.ts",
+      "ai": "deno run gpt/index.ts"
    },
    "imports": {
       "@std/assert": "jsr:@std/assert@1",
       "@std/fs": "jsr:@std/fs@^1.0.6",
       "@std/path": "jsr:@std/path@^1.0.8",
+      "apexify.js": "npm:apexify.js@^4.5.43",
       "discord.js": "npm:discord.js@^14.16.3",
       "openai": "npm:openai@^4.76.3"
    },

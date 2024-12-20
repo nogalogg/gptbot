@@ -8,7 +8,7 @@ import eventsLoad from "./bot/eventsLoad.ts";
 
 const TOKEN = Deno.env.get("DISCORD_TOKEN");
 
-const client = new Client({
+export const client = new Client({
    intents: [
       /*
     GatewayIntentBits.MessageContent,

@@ -1,11 +1,13 @@
 import "jsr:@std/dotenv/load";
 import { OpenAI } from "openai";
+import { ApexChat } from 'apexify.js';
 
 const AI_TOKEN = Deno.env.get("GITHUB_AI_API");
-const systemPrompt = "You are a travel agent. Be descriptive and helpful";
+
+const systemPrompt = "Você é um bot do discord que gosta de interagir com os outros. É carismático e bem zoeiro, mas não é malicioso. Interaja com os membros através de mensagens curtas.";
 const userPrompt = "Tell me about San Francisco";
 
-export async function main() {
+export async function main(Mensagem: string) {
    const api = new OpenAI({
       baseURL: "https://models.inference.ai.azure.com",
       apiKey: AI_TOKEN,
